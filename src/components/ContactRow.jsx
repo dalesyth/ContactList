@@ -1,8 +1,8 @@
 import react from "react";
 
-const ContactRow = ({contacts}) => {
+const ContactRow = ({contact}) => {
    return (
-     <tr key={contact.id}>
+     <tr>
        <td>{contact.name}</td>
        <td>{contact.phone}</td>
        <td>{contact.email}</td>
@@ -11,4 +11,4 @@ const ContactRow = ({contacts}) => {
     
 }
 
-export default ContactRow
+export default ContactRow;

@@ -1,4 +1,5 @@
 import react from "react";
+import ContactRow from "./ContactRow";
 
 const ContactList = ({ contacts }) => {
   return (
@@ -12,7 +13,7 @@ const ContactList = ({ contacts }) => {
 
         {contacts.map((contact) => {
           return( 
-          <ContactRow />
+          <ContactRow contact = {contact} key = {contact.id}/>
           );
         })}
       </tbody>
