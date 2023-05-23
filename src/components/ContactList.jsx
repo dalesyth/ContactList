@@ -1,6 +1,6 @@
 import react from "react";
 
-const ContactList = (props) => {
+const ContactList = ({ contacts }) => {
   return (
     <table>
       <tbody>
@@ -10,13 +10,10 @@ const ContactList = (props) => {
           <th>Email</th>
         </tr>
 
-        {props.contacts.map((contact) => {
-          return;
-          <tr key={contact.id}>
-            <td>{contact.name}</td>
-            <td>{contact.phone}</td>
-            <td>{contact.email}</td>
-          </tr>;
+        {contacts.map((contact) => {
+          return( 
+          <ContactRow />
+          );
         })}
       </tbody>
     </table>
