@@ -1,7 +1,9 @@
 import react from "react";
 import ContactRow from "./ContactRow";
 
-const ContactList = ({ contacts }) => {
+const ContactList = (props) => {
+  // console.log(contacts);
+  // console.log(selectContact)
   return (
     <table>
       <tbody>
@@ -11,9 +13,9 @@ const ContactList = ({ contacts }) => {
           <th>Email</th>
         </tr>
 
-        {contacts.map((contact) => {
+        {props.contacts.map((contact) => {
           return( 
-          <ContactRow contact = {contact} key = {contact.id}/>
+          <ContactRow contact = {contact} key = {contact.id} selectContact = {props.selectContact}/>
           );
         })}
       </tbody>
